@@ -1,0 +1,453 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height:100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('image/Store.jpg');
+    background-position: center;
+    background-size: cover;
+    position:relative;
+
+   
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 60px;
+    margin-top:20px;
+}
+.nav-links{
+    flex:1;
+    text-align: right;
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+
+  padding:8px 12px;
+
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+
+}
+.nav-links ul li:hover::after{
+   
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    /*Text in center*/
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 60px;
+}
+.text-box p{
+    margin: 10px 0px 40px;
+    font-size: 15px;
+    color:#fff
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color:rgb(226, 219, 210);
+    font-size: 15px;
+    padding:12px 34px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid rgb(204, 167, 167);
+    border-radius: 5px;
+}
+.btn:hover{
+    border: 1px solid red;
+    background-color: rgb(201, 73, 41);
+    transition: 1s;
+}
+/*Tohide bars in Full screen*/
+nav .fa{
+    display: none;
+}
+/* For small Page*/
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    /* For left Bar*/
+    .nav-links ul li{
+        display:block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #db6f6b;
+        /* opacity: 80%; */
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;/*To hide menu bar*/
+        text-align: left;
+        z-index: 2;
+        border-radius: 5px;
+        transition: 0.8s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+/*-----Books----*/
+.books{
+    width: 80%;
+    margin: auto;
+   text-align: center;
+   padding-top: 100px;
+}
+ h1{
+    font-size: 36px;
+    font-weight: 600;
+
+ }
+ p{
+     color: #777;
+     font-size: 15px;
+     font-weight: 300;
+     line-height: 22px;
+     padding: 10px;
+ }
+ .row{
+    margin-top:5%;
+    display: flex;
+    justify-content: space-between;
+ }
+ .books-column{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom:5%;
+    padding:20px 12px;
+    box-sizing: border-box;
+ }
+ h3{
+     text-align: center;
+     font-weight: 600;
+     margin:10px 0px;
+ }
+ .books-column:hover{
+     box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
+     transition:0.4s;
+ }
+ @media(max-width:700px){
+     .row{
+         flex-direction: column;
+     }
+ }
+
+ /*-----Store----*/
+ .stores{
+     width: 80%;
+     margin:auto;
+     text-align: center;
+     padding-top:50px;
+ }
+ .stores-column{
+     flex-basis: 32%;
+     border-radius: 10px;
+     margin-bottom: 30px;
+     position: relative;
+     overflow: hidden;
+   
+     
+    
+ }
+ .stores-column img{
+     width: 100%;
+     height: 100%;
+   
+ }
+ .layer{
+     background: transparent;
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     transition: 0.5s;;
+ }
+
+.layer:hover{
+    background: rgba(266,0,0,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color:#fff;
+   font-size: 25px;
+   bottom: 0;
+   left: 50%;
+   transform: translate(-50%);
+   position: absolute;
+   opacity: 0;
+   transition: 0.8s;
+
+}
+.layer:hover h3{
+    bottom: 20%;
+    opacity: 1;
+}
+
+/* ------faciciltes---- */
+.facilites{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilites-column{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilites-column img {
+    width:100%;
+   
+    border-radius: 10px;
+    height: 50%;
+   
+
+}
+
+/* ---Reviews */
+.review{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.review-column{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding:10px;
+    cursor: pointer;
+    display: flex;
+}
+.review-column img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.review-column p{
+    padding:5px;
+}
+.review-column h3{
+    margin-top:15px;
+    text-align:left;
+}
+.review-column .fa{
+    color: #db6f6b;
+}
+
+/* --call to action-- */
+ .cta{
+     margin:100px auto;
+     width:80%;
+     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./image/contact.jpg);
+     background-position: center;
+     background-size:cover;
+     border-radius:10px;
+     text-align: center;
+     padding:100px 0;
+ }
+ .cta h1{
+     color:white;
+     margin-bottom: 40px;
+     padding:0;
+ }
+ @media(max-width:700px)
+ {
+     .cta h1{
+         font-size: 24px;
+     }
+ }
+
+ /* ---foooter-- */
+  .footer{
+      width: 100%;
+      text-align: center;
+      padding: 30px 0;
+      }
+    .footer h4{
+        margin-bottom: 25px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+    .icons a{
+        text-decoration: none;
+    }
+    .icons .fa{
+    color:#f44336;
+    margin:0px 13px;
+    cursor: pointer;
+    padding:18px 0;
+    }
+
+    .fa-heart-o{
+        color:#f44336
+    }
+
+    /* --about us page-- */
+    .sub-header{
+        height: 50vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(2,9,30,0.7),rgba(2,9,30,0.7)),url(./image/Book-5.jpg);
+        background-position:center ;
+        background-size: cover;
+        text-align: center;
+        color:white;
+    }
+    .sub-header h1{
+        margin-top:100px;
+    }
+    .about-us{
+        width: 80%;
+        margin: auto;
+        padding-top:80px ;
+        padding-bottom: 50px;
+    }
+    .about-column{
+        flex-basis:45%;
+        padding:30px 2px;
+    }
+    .about-column img{
+        width: 90%;
+        height:60% ;
+    }
+    .about-column h1{
+        padding-top:0;
+    }
+    .about-column p{
+        padding:14px 0 25px;
+    }
+    .red-btn{
+        border: 1px solid #e7d4d2;
+        background: transparent;
+
+    }
+    .red-btn:hover{
+        color: white;
+    }
+
+    /* ---contact us--- */
+    .sub-header{
+        height: 50vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(2,9,30,0.7),rgba(2,9,30,0.7)),url(./image/contact.jpg);
+        background-position:center ;
+        background-size: cover;
+        text-align: center;
+        color:white;
+    }
+    .location{
+        width: 80%;
+        margin:auto;
+        padding:80px 0;
+    }
+    .location iframe{
+        width: 100%;
+
+    }
+    .contact-us{
+        width: 80%;
+        margin: auto;
+
+    }
+    .contact-column{
+        flex-basis:48%;
+        margin-bottom: 30px;
+    }
+    .contact-column div{
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .contact-column div .fa{
+        font-size: 30px;
+        color:#f44336;
+        margin:10px;
+        margin-right: 30px;
+    }
+    .contact-column div p{
+        padding:0;
+    }
+    .contact-column div h5{
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: #555;
+        font-weight: 400;
+    }
+    .contact-column input , .contact-column textarea{
+        width: 100%;
+        padding: 15px;
+        margin-bottom:17px;
+        outline: none;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+   
+    /* ---BOOKS page */
+    .about-sub-header
+    {       
+            height: 50vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(2,9,30,0.7),rgba(2,9,30,0.7)),url(./image/milan.jpg);
+            background-position:center ;
+            background-size: cover;
+            text-align: center;
+            color:white;
+        }
+    /* ---books--- */
+    .books-sub-header {       
+        height: 50vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(2,9,30,0.7),rgba(2,9,30,0.7)),url(./image/Book-5.jpg);
+        background-position:center ;
+        background-size: cover;
+        text-align: center;
+        color:white;
+    }
