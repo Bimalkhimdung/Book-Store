@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,200;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Hamaro Book Store</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="sub-header">
+    <nav>
+        <a href="index.html"><img src="./image/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="books.html">BOOKS</a></li>
+                <li><a href="about.html">ABOUT</a></li>    
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars"  onclick="showMenu()"></i>
+    </nav>
+      <h1>Contact Us</h1>
+    </section>
+    <!-- contact us content -->
+   
+  <section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.27690343451!2d85.29102752248178!3d27.709031911605965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1626263394336!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    
+  </section>
+  <section class="contact-us">
+    <div class="row">
+        <div class="contact-column">
+            <div>
+                <i class="fa fa-home"></i>
+                <span>
+                    <h5>Chaitubari Bazar</h5>
+                    <p>Birtamode Nagarpalika ,Jhapa</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <span>
+                    <h5>9814956578</h5>
+                    <p>Sunday to Saturday</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-envelope-o"></i>
+                <span>
+                    <h5>bimalkhimdung@gmail.com</h5>
+                    <p>Mail us for more</p>
+                </span>
+            </div>
+        </div>
+ <div class="contact-column">
+            <form action="form-handler.php" method="POST">
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="email" name="email" placeholder="Enter your Email adress" required>
+                <input type="text" name="subject" placeholder="Enter your book" required>
+                <textarea name="" name="message" rows="8" placeholder="Message"></textarea>
+                <button type="submit" class="btn red-btn">Send message</button>
+            </form>
+        </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+
+<section>
+  <div class="footer">
+      <h4>About Us</h4>
+      <p>Hamro Book Store<br>Jhapa,Birtamode Nagarpalika</p>
+      <div class="icons">
+             <a href="https://www.facebook.com/Bimalkhimdungrai" target="__"><i class="fa fa-facebook"></i>
+            <a href="https://twitter.com/bimal_khimdung" target="__" ><i class="fa fa-twitter"></i>
+            <a href="https://www.instagram.com/bimalkhimdung/" target="__" ><i class="fa fa-instagram"></i>
+            <a href="https://www.linkedin.com/in/bimal-rai-2332b6148/" target="__" ><i class="fa fa-linkedin"></i>
+   
+      </div> 
+      <p>Prepared By <i class="fa fa-heart-o"> </i> Bimal Rai</p>
+    </div>
+    
+
+</section>
+    <script src="./app.js"></script>
+</body>
+</html>
