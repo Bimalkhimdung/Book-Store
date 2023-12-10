@@ -20,4 +20,6 @@ jobs:
                  python-version: 3
             - name: building docker image
               run: |
+                  pwd
+                  ls -l $GITHUB_WORKSPACE
                   docker-compose -f docker-compose up
