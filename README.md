@@ -20,4 +20,4 @@ docker-compose -f docker-compose.yml up
 ![Lading Page](/src/image/Hamro%20Books.png)
 
 Checkout my website :--> 
-[rai.bimal.com.np](www.rai.bimal.com.np)
+[rai.bimal.com.np](https://raibimal.com.np)
