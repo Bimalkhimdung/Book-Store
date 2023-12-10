@@ -6,7 +6,7 @@ on:
             - main
 jobs:
     CI-CD:
-        runs-on: ubuntu:22.04
+        runs-on: ubuntu-22.04
 
         steps:
             - name: Checkout code
@@ -20,4 +20,4 @@ jobs:
                  python-version: 3
             - name: building docker image
               run: |
-                  docker compose -f ./docker-compose up
+                  docker-compose -f ./docker-compose up
