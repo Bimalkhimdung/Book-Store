@@ -1,0 +1,25 @@
+name: Complete CI
+on:
+    push:
+        branches:
+            - stage
+            - main
+jobs:
+    CI-CD:
+        runs-on: ubuntu-22.04
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+            - name: Install docker buildx
+              run : |
+                  docker context use default
+            - name: setup python3
+              uses: actions/setup-python@v2
+              with:
+                 python-version: 3
+            - name: building docker image
+              run: |
+                  pwd
+                  ls -l $GITHUB_WORKSPACE
+                  docker-compose -f docker-compose.yml up
